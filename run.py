@@ -82,4 +82,5 @@ rules = {p_a[0]: p_a_rule, target: target_rule}
 langage_frame = Language_Frame(target, p_e, constants)
 program_template = Program_Template(p_a, rules, 10)
 dilp = DILP(langage_frame, B, P, N, program_template)
-dilp.train()
+dilp.lr = 0.5
+dilp.train(steps=6000)
